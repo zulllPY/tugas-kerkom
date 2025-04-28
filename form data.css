@@ -93,6 +93,7 @@ input[type="text"]:focus{
 
 select, input[type="date"]{
     border: 2px solid #0F317E;
+    background-color:white;
 }
 
 .button{
