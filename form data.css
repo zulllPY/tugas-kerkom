@@ -1,0 +1,320 @@
+*, html{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+}
+
+.isi{
+    padding-top: 130px;
+}
+
+table, th, td { 
+    border: 2px solid #0F317E; 
+    border-collapse: collapse; 
+    padding: 15px; 
+}
+
+table { 
+    margin-bottom: 20px; 
+}
+
+.form-row{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 400px;
+    
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 15px;
+    border: 3px solid #272343;
+    border-radius:15px;
+    width: 800px;
+    background: #fafaf3 ;
+    scroll-margin-top: 90px;
+}
+
+h2,h5,label,tr,th,td{
+    color: #181627;
+}
+
+input[type="text"],input[type="date"], input[type="file"],select{
+    width: 100%;
+}
+
+input[type="text"],input[type="date"],select{
+    height: 50px;
+    border-radius:10px;
+    padding-left: 4px;
+    font-weight: 500;
+}
+
+input[type="text"]{
+    border: 2px solid #0F317E;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.5s;
+}
+
+input[type="text"]:focus{
+    border-color: #0F317E;
+    box-shadow: 0 5px 10px #0F317E;
+}
+
+#umur{
+    margin-top: 18px;
+}
+
+#nama{
+    margin-bottom: 15px;
+}
+
+select, input[type="date"]{
+    border: 2px solid #0F317E;
+}
+
+.button{
+    background-color: #ffc107;
+    font-family: monospace;
+    font-size: larger;
+    font-weight: bold;
+    width: 300px;
+    margin-top: 10px;
+    height:40px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.button:hover{
+    background-color: #dbaa14;
+    color: white;
+    transition:0.5s;
+    cursor: pointer;
+}
+
+.acc{
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+.edit{
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+.hapus{    
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+.aksi{
+    gap: 20px;
+}
+.belumapprove{
+    padding-bottom: 450px;
+    scroll-margin-top: 90px;
+}
+
+.sudahapprove{
+    padding-bottom: 300px;
+    scroll-margin-top: 80px;
+}
+
+h4{
+    text-align: center;
+}
+
+h2{
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+
+.strip{
+    background-color: #ffc107;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 88px;
+    width: 100%;
+    z-index: 9999;
+}
+
+p{
+    color: #ffc107 ;
+
+}
+
+.footer{
+    background-color: #0F317E;
+    height: 60px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.back{
+    background-color: #ffc107;
+    height: 5px;
+    position: relative;
+    margin-top: -65px;
+    z-index: 2;
+}
+nav{
+    background-color: #0F317E;
+    display: flex;
+    justify-content: space-between;
+    padding:1rem rem;
+    padding-right: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav div img{
+    width: 80px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size:18px;
+    padding: 6px 0;
+    transition: all;
+    transition-duration: 250ms;
+    border-bottom: 2px solid rgba(250, 249, 249, 0) ;
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+    color: #ffc107;
+}
+
+.icon{
+    font-size: 28px;
+    display: none;
+    color: white;
+}
+
+#out{
+    color: white;
+    font-size: 20px;
+    padding-right: 8px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        align-items: center;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .form {
+        width: 50%;
+        padding: 20px;
+        margin-bottom: 350px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .button {
+        width: 150%;
+        font-size: 16px;
+        height: 45px;
+    }
+
+    h2, h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .wrap {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 300px;
+    }
+
+    .belumapprove, .sudahapprove {
+        padding-bottom: 350px;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    nav div img {
+        width: 70px;
+    }
+
+    .aksi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img{
+        width: 50px;
+    }
+}

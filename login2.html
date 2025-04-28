@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login Form with SweetAlert2</title>
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="logo sukapura remove bg.png" type="image/x-icon">
+    <link rel="stylesheet" href="login2.css"> 
+</head>
+<body>
+<div class="login-container">
+    <h2>Login</h2>
+    <div class="field">
+        <input type="text" id="username" placeholder="username" />
+    </div>
+    <div class="field">
+        <input type="password" id="password" placeholder="password" />
+        <span id="togglePassword" onclick="togglePassword()" class="span">
+                    <i class="ph ph-eye-closed"></i>
+                    <small id="toggleText" class="textpw">Lihat Password</small>
+                </span><br>
+    </div>
+    <div class="field">
+        <select id="role">
+            <option value="">Pilih Role</option>
+            <option value="siswa">Siswa</option>
+            <option value="guru">Guru</option>
+        </select>
+    </div>
+    <div class="actions">
+        <button id="btnLogin">Login</button>
+    </div>
+</div>
+
+    <script src="login2.js"></script>
+</body>
+</html>

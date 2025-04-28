@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pengelolaan Data Siswa</title>
+  <meta name="theme-color" content="#4CAF50">
+  <link rel="stylesheet" href="form data.css">
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="logo sukapura remove bg.png" type="image/x-icon">
+</head>
+<body>
+  <div class="strip">
+    <nav>
+      <div class="logo">
+        <img src="logo sukapura remove bg.png" alt="icon/avatar">
+      </div>
+      <div class="icon" id="icon">
+        <i class="ph ph-list"></i>
+      </div>
+      <ul id="list" class="hidden">
+        <li><a href="#form">Form Data Siswa</a></li>
+        <li><a href="#databelumApprove">Data Belum Approve</a></li>
+        <li><a href="#dataApprove">Data Sudah Approve</a></li> 
+        <li><i class="ph ph-sign-out" id="out"></i></li>
+      </ul>
+    </nav>
+  </div>
+
+<main class="isi">
+  <marquee><h2>Selamat datang diwebsite kami, <span id="userDisplay"></span> (Role: <span id="roleDisplay"></span>)</h2></marquee>
+  <div class="wrap">
+    <section id="form" class="form">
+      <h2>Form Data Siswa</h2>
+      <h5>silahkan masukan data diri anda</h5>
+      <div class="form-container">
+        <form id="siswaForm" onsubmit="submitForm(event)">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required><br>
+        <div class="form-row">
+          <div class="form-group">
+            Tanggal Lahir:<input type="date" id="tanggalLahir" onchange="hitungUmur()" required><br>
+          </div>
+          <div class="form-group">
+            <input type="text" id="umur" placeholder="Umur" readonly><br>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="alamat" placeholder="Alamat" required><br>
+          </div>
+          <div class="form-group">
+            <select id="jenisKelamin" required>
+              <option value="">Pilih Jenis Kelamin</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select><br>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Kartu Keluarga: <input type="file" id="kk" accept="image/*" required></label><br>
+          </div>
+          <div class="form-group">
+            <label>Akta Kelahiran: <input type="file" id="akta" accept="image/*" required></label><br>
+          </div>
+          <div class="form-group">
+            <label>Ijazah: <input type="file" id="ijazah" accept="image/*" required></label><br>
+          </div>
+        </div>
+      </div>
+        <center>
+          <button type="submit" class="button" onclick="submitForm(event)">Submit</button>
+        </center>
+      </form>
+    </section>
+  </div>
+
+<section id="databelumApprove" class="belumapprove">
+  <center>
+  <h2>Data Belum Approve</h2>
+  <table id="belumApprove">
+    <thead>
+      <tr>
+        <th>Nama</th><th>Umur</th><th>Tanggal Lahir</th><th>Alamat</th><th>Jenis Kelamin</th>
+        <div class="img">
+          <th>KK</th><th>Akta</th><th>Ijazah</th>
+        </div>          
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </center>
+</section>
+
+<section id="dataApprove" class="sudahapprove">
+  <center>
+    <h2>Data Approved</h2>
+    <table id="approved">
+      <thead>
+        <tr>
+          <th>Nama</th><th>Umur</th><th>Tanggal Lahir</th><th>Alamat</th><th>Jenis Kelamin</th>
+          <div class="img">
+          <th>KK</th><th>Akta</th><th>Ijazah</th>
+          </img>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </center>
+</section>
+</main>
+
+<footer class="footer">
+  <center><p>&copy; 2025 Pengelolaan Data Siswa. All rights reserved.</p></center>
+</footer>
+<div class="back"></div>
+
+<script src="form data.js"></script>
+</body>
+</html>
