@@ -119,6 +119,7 @@ select, input[type="date"]{
     font-size: 20px;
     background: none;
     border: none;
+    color:#55ff6d;
 }
 
 .edit{
@@ -131,6 +132,7 @@ select, input[type="date"]{
     font-size: 20px;
     background: none;
     border: none;
+    color:red;
 }
 
 .aksi{
