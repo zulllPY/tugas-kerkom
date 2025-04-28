@@ -91,11 +91,11 @@
     // Tampilkan tombol aksi sesuai role
     if (tableId === 'belumApprove') {
       if (currentRole === 'guru') {
-        aksiTd.innerHTML = `<div class="aksi"><button onclick="approveRow(this)" class="acc"><i class="ph ph-check-circle"></i></button>
-                            <button onclick="editRow(this)" class="edit"><i class="ph ph-pencil"></i></button> 
-                            <button onclick="deleteRow(this)" class="hapus"><i class="ph ph-trash"></i></button><div>`;
+        aksiTd.innerHTML = `<div class="aksi"><button onclick="approveRow(this)" class="acc"><i class="ph ph-check-circle"></i><small>acc</small></button>
+                            <button onclick="editRow(this)" class="edit"><i class="ph ph-pencil"></i><small>edit</small></button> 
+                            <button onclick="deleteRow(this)" class="hapus"><i class="ph ph-trash"></i><small>hapus</small></button></div>`;
       } else {
-        aksiTd.innerHTML = `<button onclick="editRow(this)" class="edit"><i class="ph ph-pencil"></button>`;
+        aksiTd.innerHTML = `<button onclick="editRow(this)" class="edit"><i class="ph ph-pencil"></i><small>edit</small></button>`;
       }
       tr.appendChild(aksiTd);
     }
