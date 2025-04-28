@@ -210,7 +210,7 @@
           showConfirmButton: true,
           confirmButtonText: "oke"
         }).then(() => {
-        window.location.href = 'login2.html';
+        window.location.href = 'index.html';
       });
       }
     });
